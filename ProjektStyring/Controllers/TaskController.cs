@@ -69,7 +69,7 @@ namespace ProjektStyring.Controllers
 
 
         [HttpPut]
-        public IHttpActionResult UpdateTask(int Id)
+        public IHttpActionResult UpdateTask(int Id )
         {
             Task task = _db.Tasks.Where(t => t.Id == Id).FirstOrDefault();
 
