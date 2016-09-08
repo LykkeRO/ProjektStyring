@@ -16,7 +16,7 @@ $(document).ready(function () {
         })
           //Når vores ajax kald er gået godt, vi får et object med tilbage  
         .done(function (data) {
-            alert("Du har nu oprettet en kategori");//Laver en alert, med en tekst
+            $.notify("Din kategori er nu oprettet", "success");//Laver en alert, med en tekst
             console.log(data);//Vi skriver vores data ind i browserens "logbog"
             GetCategorys();//Kalder javascript-funktionen 'GetCatetory'
             $('#createCategory').modal('hide')//Finder vores element der hedder createCategory, og gemmer vores modal væk.
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         })
         .done(function (data) {
-            alert("Du har nu oprettet en task");
+            $.notify("Din opgave er nu oprettet", "success");
             console.log(data);
             GetCategorys();
             $('#createTask').modal('hide')
