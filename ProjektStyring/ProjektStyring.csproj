@@ -110,6 +110,7 @@
     <Content Include="Content\lib\jquery-ui\LICENSE.txt" />
     <Content Include="Content\scripts\bootstrap.min.js" />
     <Content Include="Content\scripts\global.js" />
+    <Content Include="Content\scripts\notify.js" />
     <Content Include="Content\style\bootstrap.css" />
     <Content Include="Content\style\style.css" />
     <Content Include="Global.asax" />

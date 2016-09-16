@@ -18,8 +18,22 @@
             <div class="col-md-12">
                 <header class="main-header">
                     <h1 class="pull-left">Opgaver</h1>
-                    <div class="pull-right actions">
-                        <a href="#" class="btn btn-success" data-toggle="modal" data-target="#createCategory">Opret Kategori</a>
+                    <div class="pull-right actions col-md-6">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="input-group">
+                                    <input type="text" minlength="1" id="searchInput" placeholder="søg" class="form-control" />
+                                    <span class="input-group-btn">
+                                        <button id="search" class="btn btn-primary">Søg</button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#createCategory">Opret Kategori</a>
+                            </div>
+                        </div>
+
+
                     </div>
                 </header>
             </div>
@@ -28,7 +42,7 @@
                 <div class="columns">
                     <!-- Container til alle Kategorier -->
                     <div class="columns-container">
-                      
+
                     </div>
                 </div>
             </div>
@@ -60,6 +74,31 @@
         </div>
     </div>
 
+
+
+
+    <div class="modal fade" id="viewTask" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Søgeresultater</h4>
+                </div>
+                <div class="modal-body">
+                    <ul id="taskResults"></ul>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--Opret en ny task modal-->
     <div class="modal fade" id="createTask" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <form id="createTaskForm">
@@ -76,6 +115,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
+
                         <button type="button" id="btnCreateTask" class="btn btn-primary">Opret Opgave</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
@@ -83,6 +123,7 @@
             </form>
         </div>
     </div>
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>

@@ -48,5 +48,22 @@ namespace ProjektStyring.Controllers
 
             return Ok(model);
         }
+
+
+        [HttpDelete]
+        public IHttpActionResult DeleteCategory(int Id)
+        {
+
+            Category category = _db.Categorys.Where(c => c.Id == Id).FirstOrDefault();
+            if (category == null)
+            {
+                return NotFound();
+            }
+
+            _db.Categorys.Remove(category);
+            _db.SaveChanges();
+
+            return Ok(category);
+        }
     }
 }
